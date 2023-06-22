@@ -16,7 +16,10 @@
 //Console.WriteLine($"Is there a book that has been published in 2005? - {queries.IsThereABookThat()}");
 
 // Python books with contains
-PrintParameters(queries.PythonBooksWithContains());
+//PrintParameters(queries.PythonBooksWithContains());
+
+// Books ordered by ascending title
+PrintParameters(queries.BooksOrderByAscendingTitle("Java"));
 
 void PrintParameters(IEnumerable<Book> booksCollection) {
   Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Title", "N.Pages", "PublishedDate");

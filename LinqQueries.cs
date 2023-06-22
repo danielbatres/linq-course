@@ -43,4 +43,8 @@ public class LinqQueries {
   public IEnumerable<Book> PythonBooksWithContains() {
     return BooksCollection.Where(x => x.Categories.Contains("Python"));
   }
+
+  public IEnumerable<Book> BooksOrderByAscendingTitle(string category) {
+    return BooksCollection.Where(x => x.Categories.Contains(category)).OrderBy(x => x.Title);
+  }
 }
