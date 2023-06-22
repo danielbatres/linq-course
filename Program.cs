@@ -7,7 +7,10 @@
 //PrintParameters(queries.BooksAfterYearTwoThousand());
 
 // Books with more than 250 pages and title contains "In Action"
-PrintParameters(queries.BooksWithTwoConditions());
+//PrintParameters(queries.BooksWithTwoConditions());
+
+// All books has status
+Console.WriteLine($"All books has status? - {queries.AllBooksHasStatus()}");
 
 void PrintParameters(IEnumerable<Book> booksCollection) {
   Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Title", "N.Pages", "PublishedDate");

@@ -31,4 +31,8 @@ public class LinqQueries {
 
     return from book in BooksCollection where book.PageCount > 250 && book.Title.Contains("in Action") select book;
   }
+
+  public bool AllBooksHasStatus() {
+    return BooksCollection.All(x => x.Status != string.Empty);
+  }
 }
