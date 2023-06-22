@@ -39,4 +39,8 @@ public class LinqQueries {
   public bool IsThereABookThat() {
     return BooksCollection.Any(x => x.PublishedDate.Year == 2005);
   }
+
+  public IEnumerable<Book> PythonBooksWithContains() {
+    return BooksCollection.Where(x => x.Categories.Contains("Python"));
+  }
 }
