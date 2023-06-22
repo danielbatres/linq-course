@@ -55,7 +55,7 @@ public class LinqQueries {
   public IEnumerable<Book> ThreeFirstBooksOrderByDate() {
     return BooksCollection
     .Where(x => x.Categories.Contains("Java"))
-    .OrderByDescending(x => x.PublishedDate)
-    .Take(3);
+    .OrderBy(x => x.PublishedDate)
+    .TakeLast(3);
   }
 }
