@@ -19,7 +19,10 @@
 //PrintParameters(queries.PythonBooksWithContains());
 
 // Books ordered by ascending title
-PrintParameters(queries.BooksOrderByAscendingTitle("Java"));
+//PrintParameters(queries.BooksOrderByAscendingTitle("Java"));
+
+// Books of more than 450 pages sorted in descending order
+PrintParameters(queries.BooksWithMoreThan450PagesDescending());
 
 void PrintParameters(IEnumerable<Book> booksCollection) {
   Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Title", "N.Pages", "PublishedDate");

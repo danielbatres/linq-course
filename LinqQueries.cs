@@ -47,4 +47,8 @@ public class LinqQueries {
   public IEnumerable<Book> BooksOrderByAscendingTitle(string category) {
     return BooksCollection.Where(x => x.Categories.Contains(category)).OrderBy(x => x.Title);
   }
+
+  public IEnumerable<Book> BooksWithMoreThan450PagesDescending() {
+    return BooksCollection.Where(x => x.PageCount > 450).OrderByDescending(x => x.PageCount);
+  }
 }
