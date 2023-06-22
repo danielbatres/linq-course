@@ -22,4 +22,13 @@ public class LinqQueries {
 
     return from book in BooksCollection where book.PublishedDate.Year > 2000 select book;
   }
+
+  public IEnumerable<Book> BooksWithTwoConditions() {
+    // Extesion method
+    //return BooksCollection.Where(x => x.PageCount > 250 && x.Title.Contains("in Action"));
+
+    // Query expression
+
+    return from book in BooksCollection where book.PageCount > 250 && book.Title.Contains("in Action") select book;
+  }
 }
