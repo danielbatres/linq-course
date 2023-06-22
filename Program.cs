@@ -22,7 +22,10 @@
 //PrintParameters(queries.BooksOrderByAscendingTitle("Java"));
 
 // Books of more than 450 pages sorted in descending order
-PrintParameters(queries.BooksWithMoreThan450PagesDescending());
+//PrintParameters(queries.BooksWithMoreThan450PagesDescending());
+
+// Three first books ordered by descending published date
+PrintParameters(queries.ThreeFirstBooksOrderByDate());
 
 void PrintParameters(IEnumerable<Book> booksCollection) {
   Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Title", "N.Pages", "PublishedDate");
