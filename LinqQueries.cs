@@ -35,4 +35,8 @@ public class LinqQueries {
   public bool AllBooksHasStatus() {
     return BooksCollection.All(x => x.Status != string.Empty);
   }
+
+  public bool IsThereABookThat() {
+    return BooksCollection.Any(x => x.PublishedDate.Year == 2005);
+  }
 }

@@ -10,7 +10,10 @@
 //PrintParameters(queries.BooksWithTwoConditions());
 
 // All books has status
-Console.WriteLine($"All books has status? - {queries.AllBooksHasStatus()}");
+//Console.WriteLine($"All books has status? - {queries.AllBooksHasStatus()}");
+
+// Is there a book that have been published in 2005
+Console.WriteLine($"Is there a book that has been published in 2005? - {queries.IsThereABookThat()}");
 
 void PrintParameters(IEnumerable<Book> booksCollection) {
   Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Title", "N.Pages", "PublishedDate");
