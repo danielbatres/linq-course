@@ -92,4 +92,8 @@ public class LinqQueries {
   public Book BookWithLatestPublicationDate() {
     return BooksCollection.MaxBy(x => x.PublishedDate);
   }
+
+  public int SumOfBookPages() {
+    return BooksCollection.Where(x => x.PageCount >= 0 && x.PageCount <= 500).Sum(p => p.PageCount);
+  }
 }

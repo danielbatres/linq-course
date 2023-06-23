@@ -50,9 +50,12 @@
 
 // Book with latest publication date
 
-Book BookLatest = queries.BookWithLatestPublicationDate();
+//Book BookLatest = queries.BookWithLatestPublicationDate();
 
-Console.WriteLine($"{BookLatest.Title} - {BookLatest.PublishedDate.ToShortDateString()}");
+//Console.WriteLine($"{BookLatest.Title} - {BookLatest.PublishedDate.ToShortDateString()}");
+
+// Sum of book pages
+Console.WriteLine($"Total: {queries.SumOfBookPages()}");
 
 void PrintParameters(IEnumerable<Book> booksCollection) {
   Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Title", "N.Pages", "PublishedDate");
