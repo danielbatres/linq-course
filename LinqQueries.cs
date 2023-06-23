@@ -58,4 +58,10 @@ public class LinqQueries {
     .OrderBy(x => x.PublishedDate)
     .TakeLast(3);
   }
+
+  public IEnumerable<Book> ThirdAndFourthBook() {
+     return BooksCollection.Where(x => x.PageCount > 400)
+     .Take(4)
+     .Skip(2);
+  }
 }

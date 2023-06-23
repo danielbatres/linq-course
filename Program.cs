@@ -25,7 +25,10 @@
 //PrintParameters(queries.BooksWithMoreThan450PagesDescending());
 
 // Three first books ordered by descending published date
-PrintParameters(queries.ThreeFirstBooksOrderByDate());
+//PrintParameters(queries.ThreeFirstBooksOrderByDate());
+
+// Third and fourth book of more than 400 pages
+PrintParameters(queries.ThirdAndFourthBook());
 
 void PrintParameters(IEnumerable<Book> booksCollection) {
   Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Title", "N.Pages", "PublishedDate");
