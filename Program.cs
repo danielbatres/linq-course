@@ -37,7 +37,10 @@
 //Console.WriteLine(queries.CountBooks());
 
 // Minor publication date
-Console.WriteLine(queries.MinorPublicationDate());
+//Console.WriteLine(queries.MinorPublicationDate());
+
+// Larger page quantity 
+Console.WriteLine(queries.LargerPageQuantity());
 
 void PrintParameters(IEnumerable<Book> booksCollection) {
   Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Title", "N.Pages", "PublishedDate");

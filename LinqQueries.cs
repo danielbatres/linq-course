@@ -80,4 +80,8 @@ public class LinqQueries {
   public DateTime MinorPublicationDate() {
     return BooksCollection.Min(x => x.PublishedDate);
   }
+
+  public int LargerPageQuantity() { 
+    return BooksCollection.Max(x => x.PageCount);
+  }
 }
