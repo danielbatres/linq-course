@@ -67,10 +67,13 @@
 //PrintGroup(queries.BooksGroupedByYear());
 
 // Book dictionary
-var LookupDictionary = queries.BookDictionary();
+//var LookupDictionary = queries.BookDictionary();
 
-PrintDictionary(LookupDictionary, 'A');
+//PrintDictionary(LookupDictionary, 'A');
 
+// Books filtered with the join clause
+
+PrintParameters(queries.JoinBooks());
 
 void PrintParameters(IEnumerable<Book> booksCollection) {
   Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Title", "N.Pages", "PublishedDate");

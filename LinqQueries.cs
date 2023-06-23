@@ -122,4 +122,11 @@ public class LinqQueries {
   public ILookup<char, Book> BookDictionary() {
     return BooksCollection.ToLookup(x => x.Title[0], x => x);
   }
+
+  public IEnumerable<Book> JoinBooks() {
+    var booksAfter2005 = BooksCollection.Where(x => x.PublishedDate.Year > 2005);
+    var booksWithMoreThan400Pages = BooksCollection.Where(x => x.PageCount > 500);
+
+    return booksAfter2005.Join(booksWithMoreThan400Pages, p => p.Title, x => x.Title, (p, x) => p);
+  }
 }
