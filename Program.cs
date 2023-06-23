@@ -28,7 +28,10 @@
 //PrintParameters(queries.ThreeFirstBooksOrderByDate());
 
 // Third and fourth book of more than 400 pages
-PrintParameters(queries.ThirdAndFourthBook());
+//PrintParameters(queries.ThirdAndFourthBook());
+
+// Three first books filtered with select 
+PrintParameters(queries.ThreeFirstBooks());
 
 void PrintParameters(IEnumerable<Book> booksCollection) {
   Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Title", "N.Pages", "PublishedDate");
