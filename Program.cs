@@ -64,7 +64,13 @@
 //Console.WriteLine(queries.AverageCharactersTitle());
 
 // Books grouped by year
-PrintGroup(queries.BooksGroupedByYear());
+//PrintGroup(queries.BooksGroupedByYear());
+
+// Book dictionary
+var LookupDictionary = queries.BookDictionary();
+
+PrintDictionary(LookupDictionary, 'A');
+
 
 void PrintParameters(IEnumerable<Book> booksCollection) {
   Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Title", "N.Pages", "PublishedDate");
@@ -82,5 +88,13 @@ void PrintGroup(IEnumerable<IGrouping<int, Book>> booksCollection) {
     foreach (var item in group) {
       Console.WriteLine("{0,-60} {1, 15} {2, 15}", item.Title, item.PageCount, item.PublishedDate.Date.ToShortDateString());
     }
+  }
+}
+
+void PrintDictionary(ILookup<char, Book> booksCollection, char letter) {
+  Console.WriteLine("{0,-60} {1, 15} {2, 15}\n", "Titulo", "N. Paginas", "Fecha publicacion");
+
+  foreach (var item in booksCollection[letter]) {
+    Console.WriteLine("{0,-60} {1, 15} {2, 15}", item.Title, item.PageCount, item.PublishedDate.Date.ToShortDateString());
   }
 }
