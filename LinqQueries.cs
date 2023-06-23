@@ -113,4 +113,9 @@ public class LinqQueries {
   public double AverageCharactersTitle() {
     return BooksCollection.Average(x => x.Title.Length);
   }
+
+  public IEnumerable<IGrouping<int, Book>> BooksGroupedByYear() {
+    return BooksCollection.Where(x => x.PublishedDate.Year >= 2000)
+    .GroupBy(x => x.PublishedDate.Year);
+  }
 }
