@@ -88,4 +88,8 @@ public class LinqQueries {
   public Book BookWithFewerPages() {
     return BooksCollection.Where(x => x.PageCount != 0).MinBy(x => x.PageCount);
   }
+
+  public Book BookWithLatestPublicationDate() {
+    return BooksCollection.MaxBy(x => x.PublishedDate);
+  }
 }
