@@ -74,6 +74,6 @@ public class LinqQueries {
   }
 
   public long CountBooks(int firstRange = 200, int secondRange = 500) {
-    return BooksCollection.Where(x => x.PageCount >= firstRange && x.PageCount <= secondRange).LongCount();
+    return BooksCollection.LongCount(x => x.PageCount >= firstRange && x.PageCount <= secondRange);
   }
 }
