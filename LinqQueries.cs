@@ -70,6 +70,10 @@ public class LinqQueries {
     .Select(x => new Book() { 
       Title = x.Title,
       PageCount = x.PageCount
-      });
-    }
+    });
+  }
+
+  public int CountBooks(int firstRange = 200, int secondRange = 500) {
+    return BooksCollection.Where(x => x.PageCount >= firstRange && x.PageCount <= secondRange).Count();
+  }
 }
