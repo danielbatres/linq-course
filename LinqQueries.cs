@@ -84,4 +84,8 @@ public class LinqQueries {
   public int LargerPageQuantity() { 
     return BooksCollection.Max(x => x.PageCount);
   }
+
+  public Book BookWithFewerPages() {
+    return BooksCollection.Where(x => x.PageCount != 0).MinBy(x => x.PageCount);
+  }
 }
