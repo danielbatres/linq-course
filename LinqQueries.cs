@@ -109,4 +109,8 @@ public class LinqQueries {
       return bookTitle;
     });
   }
+
+  public double AverageCharactersTitle() {
+    return BooksCollection.Average(x => x.Title.Length);
+  }
 }

@@ -58,7 +58,10 @@
 //Console.WriteLine($"Total: {queries.SumOfBookPages()}");
 
 // Concatenated Book titles
-Console.WriteLine(queries.ConcatenatedBookTitle());
+//Console.WriteLine(queries.ConcatenatedBookTitle());
+
+// Average Characters title
+Console.WriteLine(queries.AverageCharactersTitle());
 
 void PrintParameters(IEnumerable<Book> booksCollection) {
   Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Title", "N.Pages", "PublishedDate");
