@@ -55,7 +55,10 @@
 //Console.WriteLine($"{BookLatest.Title} - {BookLatest.PublishedDate.ToShortDateString()}");
 
 // Sum of book pages
-Console.WriteLine($"Total: {queries.SumOfBookPages()}");
+//Console.WriteLine($"Total: {queries.SumOfBookPages()}");
+
+// Concatenated Book titles
+Console.WriteLine(queries.ConcatenatedBookTitle());
 
 void PrintParameters(IEnumerable<Book> booksCollection) {
   Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Title", "N.Pages", "PublishedDate");

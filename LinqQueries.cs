@@ -96,4 +96,17 @@ public class LinqQueries {
   public int SumOfBookPages() {
     return BooksCollection.Where(x => x.PageCount >= 0 && x.PageCount <= 500).Sum(p => p.PageCount);
   }
+
+  public string ConcatenatedBookTitle() {
+    return BooksCollection
+    .Where(x => x.PublishedDate.Year > 2015)
+    .Aggregate("", (bookTitle, next) => {
+      if (bookTitle != string.Empty) 
+        bookTitle += " - " + next.Title;
+      else
+        bookTitle += next.Title;
+
+      return bookTitle;
+    });
+  }
 }
