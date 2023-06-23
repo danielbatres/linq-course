@@ -34,7 +34,10 @@
 //PrintParameters(queries.ThreeFirstBooks());
 
 // Count the number of books that are between 200 and 500 pages long
-Console.WriteLine(queries.CountBooks());
+//Console.WriteLine(queries.CountBooks());
+
+// Minor publication date
+Console.WriteLine(queries.MinorPublicationDate());
 
 void PrintParameters(IEnumerable<Book> booksCollection) {
   Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Title", "N.Pages", "PublishedDate");

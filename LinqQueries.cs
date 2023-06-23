@@ -76,4 +76,8 @@ public class LinqQueries {
   public long CountBooks(int firstRange = 200, int secondRange = 500) {
     return BooksCollection.LongCount(x => x.PageCount >= firstRange && x.PageCount <= secondRange);
   }
+
+  public DateTime MinorPublicationDate() {
+    return BooksCollection.Min(x => x.PublishedDate);
+  }
 }
